@@ -18,9 +18,9 @@ import { ADMIN } from "../../helpers/consts";
 import Logo from "../assets/images/NOMAD.svg";
 
 const pages = [
-  { name: "PRODUCTS", link: "/products", id: 1 },
-  { name: "ABOUT US", link: "/aboutus", id: 2 },
-  { name: "CONTACTS", link: "/contacts", id: 3 },
+  { name: "SUNGLASSES", link: "/products", id: 1 },
+  { name: "EYEGLASSES", link: "/aboutus", id: 2 },
+  { name: "", link: "/contacts", id: 3 },
 ];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -59,12 +59,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <img
-
-              />{" "}
-              <span>
-                {/*<img id="logo" src={Logo} alt="" />*/}
-              </span>
+              <img /> <span>{/*<img id="logo" src={Logo} alt="" />*/}</span>
             </Typography>
           </Link>
 
