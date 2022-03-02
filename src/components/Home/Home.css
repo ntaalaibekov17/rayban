@@ -1,0 +1,72 @@
+.container {
+  background-image: url(../assets/images/photo1.jpg);
+  margin-top: 87px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 86vh;
+  /* background-attachment: fixed; */
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  height: 56vh;
+  margin-right: 110px;
+  color: white;
+}
+.h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.button {
+  margin-top: 30px;
+  width: 130px;
+  height: 40px;
+  font-weight: bold;
+  border-color: white;
+  border-radius: 2px;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.aviator {
+  max-width: 22vw;
+}
+.glasses {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ochki {
+  margin-top: 100px;
+}
+
+.tostart {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.bir,
+.eki {
+  width: 100%;
+  max-width: 700px;
+}

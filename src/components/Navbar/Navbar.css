@@ -1,0 +1,30 @@
+#logo {
+  width: 5vw;
+  height: 3vh;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Shizuru&display=swap"); */
+
+#navbar_color {
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#logo {
+  width: 8vw;
+  height: 9vh;
+  margin-top: 2vh;
+  margin-left: 4vh;
+}
+
+.logo {
+  width: 16vw;
+}
+
+#button {
+  color: black;
+  margin-right: 4vh;
+}
