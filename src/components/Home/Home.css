@@ -6,6 +6,7 @@
   background-position: center center;
   background-size: cover;
   height: 86vh;
+
   /* background-attachment: fixed; */
 }
 
@@ -15,7 +16,7 @@
   align-items: flex-end;
   justify-content: end;
   height: 56vh;
-  margin-right: 110px;
+  margin-right: 50px;
   color: white;
 }
 .h1 {
