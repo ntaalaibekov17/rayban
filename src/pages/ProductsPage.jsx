@@ -7,6 +7,7 @@ import "./ProductPage.css"
 import ArrowCircleRightSharpIcon from "@mui/icons-material/ArrowCircleRightSharp";
 import ArrowCircleLeftSharpIcon from "@mui/icons-material/ArrowCircleLeftSharp";
 
+
 const ProductsPage = () => {
     const { products, getProducts } = useProducts();
     const [page, setPage] = useState(0);

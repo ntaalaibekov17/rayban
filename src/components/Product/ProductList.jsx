@@ -10,10 +10,6 @@ import ProductCard from "../Product/ProductCard";
 import "./ProductList.css"
 import SideBar from "../SideBar/SideBar"
 
-import PropTypes from 'prop-types';
-import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
-import { styled } from '@mui/system';
-
 
 
 

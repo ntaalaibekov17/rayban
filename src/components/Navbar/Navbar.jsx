@@ -14,7 +14,10 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { ADMIN } from "../../helpers/consts";
+import { useProducts } from '../../contexts/ProductContext';
 import "../Navbar/Navbar.css";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge } from '@mui/material';
 
 import Logo from "../assets/images/logoray.png";
 
@@ -33,6 +36,8 @@ const Navbar = (props) => {
     handleLogout,
     user: { email },
   } = useAuth();
+
+  const { cart } = useProducts();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -168,7 +173,19 @@ const Navbar = (props) => {
                   ADMIN PANEL
                 </Button>
               </Link>
-            ) : null}
+            ) : (
+                <Link to="/cart">
+                  <Button sx={{my: 2, color: 'black' }}>
+                    <Badge
+                        badgeContent={cart?.products ? cart.products.length : 0}
+                        color="secondary"
+                    >
+                      <ShoppingCartIcon />
+                    </Badge>
+                  </Button>
+                </Link>
+            )}}
+
             {/* ADMIN PANEL */}
           </Box>
 
@@ -190,7 +207,9 @@ const Navbar = (props) => {
               </Button>
             ) : null}
 
+
             {email ? null : (
+
               <Link to="/auth">
                 <Button
                   id="button"
@@ -206,7 +225,9 @@ const Navbar = (props) => {
                 >
                   Login
                 </Button>
+
               </Link>
+
             )}
           </Box>
         </Toolbar>
@@ -215,3 +236,4 @@ const Navbar = (props) => {
   );
 };
 export default Navbar;
+

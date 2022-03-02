@@ -6,7 +6,19 @@ import ProductContextProvider from "./contexts/ProductContext";
 import MainRoutes from "./MainRoutes";
 
 function App() {
-  return (
+
+    return (
+        <>
+            <BrowserRouter>
+                <AuthContextProvider>
+                    <ProductContextProvider>
+                        <Navbar />
+                        <MainRoutes />
+                    </ProductContextProvider>
+                </AuthContextProvider>
+            </BrowserRouter>
+        </>
+    );  return (
     <>
       <AuthContextProvider>
           <BrowserRouter>
@@ -22,6 +34,7 @@ function App() {
       </AuthContextProvider>
     </>
   );
+
 }
 
 export default App;
