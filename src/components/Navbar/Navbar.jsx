@@ -14,13 +14,14 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { ADMIN } from "../../helpers/consts";
+import "../Navbar/Navbar.css";
 
-import Logo from "../assets/images/NOMAD.svg";
+import Logo from "../assets/images/logoray.png";
 
 const pages = [
   { name: "SUNGLASSES", link: "/products", id: 1 },
-  { name: "EYEGLASSES", link: "/aboutus", id: 2 },
-  { name: "", link: "/contacts", id: 3 },
+  { name: "PRESCRIPTION", link: "/aboutus", id: 2 },
+  { name: "STORE LOCATOR", link: "/contacts", id: 3 },
 ];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -49,7 +50,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar id="navbar_color" position="static">
+    <AppBar id="navbar_color" position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/">
@@ -59,11 +60,19 @@ const Navbar = (props) => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <img /> <span>{/*<img id="logo" src={Logo} alt="" />*/}</span>
+              <img />{" "}
+              <span>
+                <img id="logo" src={Logo} alt="" />
+              </span>
             </Typography>
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", color: "black" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -131,7 +140,13 @@ const Navbar = (props) => {
                 <Button
                   key={page.id}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "black",
+                    display: "block",
+                    fontFamily: "-moz-initial",
+                    fontSize: "16px",
+                  }}
                 >
                   {page.name}
                 </Button>
@@ -141,7 +156,15 @@ const Navbar = (props) => {
             {/* ADMIN PANEL */}
             {email == ADMIN ? (
               <Link to="/admin">
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                <Button
+                  sx={{
+                    my: 2,
+                    color: "black",
+                    display: "block",
+                    fontFamily: "-moz-initial",
+                    fontSize: "16px",
+                  }}
+                >
                   ADMIN PANEL
                 </Button>
               </Link>
@@ -155,7 +178,12 @@ const Navbar = (props) => {
                 id="button"
                 variant="standard"
                 color="error"
-                sx={{ my: 2, display: "block" }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  fontFamily: "-moz-initial",
+                  fontSize: "17px",
+                }}
                 onClick={handleLogout}
               >
                 Logout
@@ -168,7 +196,12 @@ const Navbar = (props) => {
                   id="button"
                   variant="standard"
                   color="error"
-                  sx={{ my: 2, display: "block" }}
+                  sx={{
+                    my: 2,
+                    display: "block",
+                    fontFamily: "-moz-initial",
+                    fontSize: "17px",
+                  }}
                   onClick={handleLogout}
                 >
                   Login
