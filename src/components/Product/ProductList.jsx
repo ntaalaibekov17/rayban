@@ -3,11 +3,23 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContext";
 import MediaCard from "../Product/ProductCard";
-
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import ProductCard from "../Product/ProductCard";
+import "./ProductList.css"
+import SideBar from "../SideBar/SideBar"
 
-const ProductList = () => {
-  const { products, getProducts } = useProducts();
+import PropTypes from 'prop-types';
+import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
+import { styled } from '@mui/system';
+
+
+
+
+const ProductList = ({ products }) => {
+
+  const { getProducts } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
@@ -30,30 +42,42 @@ const ProductList = () => {
   }, [search]);
 
   return (
-    <>
-      <TextField
-        label="Search"
-        variant="standard"
-        sx={{ margin: "2vw", width: "35vw" }}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <Grid container spacing={6}>
-        {products ? (
-          products.map((item) => (
-            <Grid item>
-              {/* <ProductCard item={item} key={item.id} /> */}
-              <MediaCard item={item} key={item.id} />
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="lg">
+            <h1 className="title">VIEW ALL</h1>
+            <h3 className="title-paragraph">SUNGLASSES</h3>
+            <Grid>
+                <SideBar/>
             </Grid>
-          ))
-        ) : (
-          <>
-            <h2>..Loading</h2>
-          </>
-        )}
-      </Grid>
-    </>
+            <TextField
+                label="Search Your Glass"
+                variant="standard"
+                sx={{ marginBottom:"2vw", marginLeft: "43vw", width: "25vw" }}
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+            />
+            <Grid container spacing={7}>
+              {products ? (
+                  products.map((item) => (
+
+                      <Grid item>
+                        <MediaCard item={item} key={item.id} />
+                      </Grid>
+                  ))
+              ) : (
+                  <>
+                    <h2>..Loading</h2>
+                  </>
+              )}
+
+            </Grid>
+        </Container>
+      </React.Fragment>
+
   );
 };
 
 export default ProductList;
+
+

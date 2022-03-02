@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { ADMIN } from "../../helpers/consts";
 
-import Logo from "../assets/images/NOMAD.svg";
+// import Logo from "../assets/images/NOMAD.svg";
 
 const pages = [
   { name: "PRODUCTS", link: "/products", id: 1 },
@@ -59,9 +59,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <img
-
-              />{" "}
+           {" "}
               <span>
                 {/*<img id="logo" src={Logo} alt="" />*/}
               </span>
@@ -122,7 +120,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              <img className="logo" src={Logo} alt="" />
+              {/*<img className="logo" src={Logo} alt="" />*/}
             </Typography>
           </Link>
           <Box
