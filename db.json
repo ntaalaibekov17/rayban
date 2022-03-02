@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "name": "Aviator Classic",
+      "description": "tut description",
+      "price": "25$",
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/Aviator-Classic.jpg",
+      "type": "eyeglasses",
+      "id": 1
+    },
+    {
+      "name": "Round Metal",
+      "description": "tut description",
+      "price": null,
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/Clubmaster-Metal.jpg",
+      "type": "sunglasses",
+      "id": 2
+    },
+    {
+      "name": "New Wayfarer",
+      "description": "tut description",
+      "price": null,
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/Round-Double-Bridge.jpg",
+      "type": "eyeglasses",
+      "id": 3
+    },
+    {
+      "name": "Clubmaster Classic",
+      "description": "tut description",
+      "price": null,
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/Hexagonal-Flat-Lenses.jpg",
+      "type": "eyeglasses",
+      "id": 4
+    },
+    {
+      "name": "Justin Classic",
+      "description": "tut description",
+      "price": null,
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/Wayfarer-II-Classic.jpg",
+      "type": "sunglasses",
+      "id": 5
+    },
+    {
+      "name": "Erika Classic",
+      "description": "tut description",
+      "price": null,
+      "picture": "https://www.ray-ban.com/_repository/_resources/productscatalog/sun/images/New-Wayfarer-Classic.jpg",
+      "type": "sunglasses",
+      "id": 6
+    },
+    {
+      "name": "dwq",
+      "description": "qewewqewq",
+      "price": null,
+      "picture": "ewq",
+      "type": "ewq",
+      "id": 7
+    },
+    {
+      "name": "ew",
+      "description": "ewqrew",
+      "price": null,
+      "picture": "rew",
+      "type": "rew",
+      "id": 8
+    },
+    {
+      "name": "dawe",
+      "description": "we",
+      "price": null,
+      "picture": "rew",
+      "type": "rew",
+      "id": 9
+    },
+    {
+      "name": "rew",
+      "description": "",
+      "price": null,
+      "picture": "rew",
+      "type": "rew",
+      "id": 10
+    },
+    {
+      "name": "eqwrew",
+      "description": "rew",
+      "price": null,
+      "picture": "rew",
+      "type": "rwe",
+      "id": 11
+    }
+  ]
+}

@@ -18,34 +18,22 @@ export default function MediaCard({ item }) {
     } = useAuth();
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{  maxWidth: 400 }}>
       <CardMedia
         component="img"
-        height="140"
+        height="320"
         image={item.picture}
+
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography align = "center" gutterBottom variant="h5" component="div">
           {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {item.description}
+          {/*{item.description}*/}
         </Typography>
       </CardContent>
-      {/*<CardActions>*/}
-      {/*    */}
-      {/*  <Button size="small" onClick={() => deleteProduct(item.id)}>*/}
-      {/*    DELETE*/}
-      {/*  </Button>*/}
-
-      {/*  <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>*/}
-      {/*    EDIT*/}
-      {/*  </Button>*/}
-
-      {/*  <span onClick={() => navigate(`/products/${item.id}`)}>more...</span>*/}
-      {/*</CardActions>*/}
-
         <CardActions>
             {email === ADMIN ? (
                 <>
@@ -59,7 +47,7 @@ export default function MediaCard({ item }) {
                 </>
             ) : null}
 
-            <span onClick={() => navigate(`/products/${item.id}`)}>more...</span>
+            <span onClick={() => navigate(`/products/${item.id}`)}>details</span>
         </CardActions>
     </Card>
   );
