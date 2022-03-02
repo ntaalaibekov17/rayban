@@ -10,8 +10,12 @@ import { useNavigate } from 'react-router-dom';
 import {useAuth} from "../../contexts/AuthContext";
 import {ADMIN} from "../../helpers/consts";
 
+
+import { IconButton } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 export default function MediaCard({ item }) {
-  const { deleteProduct } = useProducts();
+  const { deleteProduct, addProductToCart, checkProductInCart } = useProducts();
   const navigate = useNavigate();
     const {
         user: { email },
@@ -45,7 +49,13 @@ export default function MediaCard({ item }) {
                         EDIT
                     </Button>
                 </>
-            ) : null}
+            ) : (
+                <IconButton onClick={() => addProductToCart(item)}>
+                    <ShoppingCartIcon
+                        color={checkProductInCart(item.id) ? "secondary" : ""}
+                    />
+                </IconButton>
+            )}
 
             <span onClick={() => navigate(`/products/${item.id}`)}>details</span>
         </CardActions>

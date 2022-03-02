@@ -5,18 +5,18 @@ import ProductContextProvider from './contexts/ProductContext';
 import MainRoutes from './MainRoutes';
 
 function App() {
-  return (
-    <>
-      <AuthContextProvider>
-          <BrowserRouter>
-            <ProductContextProvider>
-            <Navbar/>
-            <MainRoutes />
-            </ProductContextProvider>
-          </BrowserRouter>
-      </AuthContextProvider>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <AuthContextProvider>
+                    <ProductContextProvider>
+                        <Navbar />
+                        <MainRoutes />
+                    </ProductContextProvider>
+                </AuthContextProvider>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
