@@ -9,13 +9,16 @@ function App() {
   return (
     <>
       <AuthContextProvider>
-        <ProductContextProvider>
           <BrowserRouter>
-            <Navbar />
+            <ProductContextProvider>
+            <Navbar/>
             <MainRoutes />
+
             <Footer />
+
+            </ProductContextProvider>
+
           </BrowserRouter>
-        </ProductContextProvider>
       </AuthContextProvider>
     </>
   );

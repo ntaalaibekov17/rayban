@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+/**{*/
+/*    font-family: 'Oswald', sans-serif;*/
+/*}*/
+.title{
+    color: black;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    font-size: 54px;
+    margin-top: 70px;
+}
+.title-paragraph{
+    color: #ccd7db;
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 70px;
+    font-family: 'Oswald', sans-serif;
+}
