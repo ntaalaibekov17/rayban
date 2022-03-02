@@ -1,18 +1,3 @@
-// import React from "react";
-// import photo1 from "../assets/images/photo1.jpg";
-
-// const Home = () => {
-//   return (
-//     <>
-//       <div className="container">
-//         <img src={photo1} alt="" />
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Home;
-
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
@@ -21,24 +6,20 @@ import left from "../assets/images/left.jpg";
 import right from "../assets/images/right.jpg";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import MobileStepper from "@mui/material/MobileStepper";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import boy from "../assets/images/boy.jpg";
-import live from "../assets/images/live.jpg";
-
 import Aviator from "../assets/images/Aviator.png";
 import Clubmaster from "../assets/images/Clubmaster.png";
 import Marshal from "../assets/images/Marshal.png";
 import Round from "../assets/images/Round.png";
 import girl from "../assets/images/girl.jpg";
 import { Card, CardContent, CardMedia, Grid } from "@mui/material";
-import { display, margin } from "@mui/system";
+
+import { Link } from "react-router-dom";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -83,16 +64,18 @@ export default function Home() {
           <h1 className="h1">SUMMER, YOU'RE ON.</h1>
           <p className="p1">Put your Ray-Ban on and play </p>
           <p className="p2">it out with confidence.</p>
-          <Button
-            sx={{
-              backgroundColor: "white",
-              color: "black",
-              marginTop: "20px",
-              fontWeight: "bold",
-            }}
-          >
-            DISCOVER MORE
-          </Button>
+          <a target="_blank" href="https://www.ray-ban.com/usa">
+            <Button
+              sx={{
+                backgroundColor: "white",
+                color: "black",
+                marginTop: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              DISCOVER MORE
+            </Button>
+          </a>
         </div>
       </Container>
 
@@ -194,81 +177,91 @@ export default function Home() {
             TO START, THE ICONS
           </Typography>
           <Grid className="cards">
-            <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
-              <CardMedia
-                component="img"
-                height="320"
-                image={Aviator}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  align="center"
-                >
-                  AVIATOR
-                </Typography>
-              </CardContent>
-            </Card>
+            <Link to="/sunglasses">
+              <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
+                <CardMedia
+                  component="img"
+                  height="320"
+                  image={Aviator}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    align="center"
+                  >
+                    AVIATOR
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
+            {/* card2 */}
+            <Link to="/sunglasses">
+              <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
+                <CardMedia
+                  component="img"
+                  height="320"
+                  image={Marshal}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    align="center"
+                  >
+                    MARSHAL
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
-              <CardMedia
-                component="img"
-                height="320"
-                image={Marshal}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  align="center"
-                >
-                  MARSHAL
-                </Typography>
-              </CardContent>
-            </Card>
+            {/* card3 */}
+            <Link to="/sunglasses">
+              <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
+                <CardMedia
+                  component="img"
+                  height="320"
+                  image={Clubmaster}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    align="center"
+                  >
+                    CLUBMASTER
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
-              <CardMedia
-                component="img"
-                height="320"
-                image={Clubmaster}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  align="center"
-                >
-                  CLUBMASTER
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
-              <CardMedia
-                component="img"
-                height="320"
-                image={Round}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  align="center"
-                >
-                  ROUND METAL
-                </Typography>
-              </CardContent>
-            </Card>
+            {/* card4 */}
+            <Link to="/sunglasses">
+              <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
+                <CardMedia
+                  component="img"
+                  height="320"
+                  image={Round}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    align="center"
+                  >
+                    ROUND METAL
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
           </Grid>
         </Container>
 
@@ -301,20 +294,22 @@ export default function Home() {
             <Typography align="center" marginTop="7px" fontSize="2vh">
               Three icons, reborn in a new ultra-light form.
             </Typography>
-            <center>
-              <Button
-                sx={{
-                  padding: "1.5vh",
-                  backgroundColor: "black",
-                  color: "white",
-                  marginTop: "10px",
-                  borderRadius: "7%",
-                  marginBottom: "10px",
-                }}
-              >
-                SEE THE COLLECTION
-              </Button>
-            </center>
+            <Link to="/sunglasses">
+              <center>
+                <Button
+                  sx={{
+                    padding: "1.5vh",
+                    backgroundColor: "black",
+                    color: "white",
+                    marginTop: "10px",
+                    borderRadius: "7%",
+                    marginBottom: "10px",
+                  }}
+                >
+                  SEE THE COLLECTION
+                </Button>
+              </center>
+            </Link>
           </Box>
           {/* 2 */}
           <Box>
@@ -329,20 +324,22 @@ export default function Home() {
             <Typography align="center" marginTop="7px" fontSize="2vh">
               Our big classic has gone metal. And it’s already a must-have.
             </Typography>
-            <center>
-              <Button
-                sx={{
-                  padding: "1.5vh",
-                  backgroundColor: "black",
-                  color: "white",
-                  marginTop: "10px",
-                  borderRadius: "7%",
-                  marginBottom: "10px",
-                }}
-              >
-                SEE THE COLLECTION
-              </Button>
-            </center>
+            <Link to="/sunglasses">
+              <center>
+                <Button
+                  sx={{
+                    padding: "1.5vh",
+                    backgroundColor: "black",
+                    color: "white",
+                    marginTop: "10px",
+                    borderRadius: "7%",
+                    marginBottom: "10px",
+                  }}
+                >
+                  SEE THE COLLECTION
+                </Button>
+              </center>
+            </Link>
           </Box>
         </Container>
       </Container>
