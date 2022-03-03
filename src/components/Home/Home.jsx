@@ -18,6 +18,7 @@ import Marshal from "../assets/images/Marshal.png";
 import Round from "../assets/images/Round.png";
 import girl from "../assets/images/girl.jpg";
 import { Card, CardContent, CardMedia, Grid } from "@mui/material";
+import Aos from "aos";
 
 import { Link } from "react-router-dom";
 
@@ -56,6 +57,11 @@ export default function Home() {
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
+
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -177,8 +183,8 @@ export default function Home() {
             TO START, THE ICONS
           </Typography>
           <Grid className="cards">
-            <Link to="/sunglasses">
-              <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
+            <Link to="/products">
+              <Card sx={{ maxWidth: 345, marginBottom: "20px " }}>
                 <CardMedia
                   component="img"
                   height="320"
@@ -198,7 +204,7 @@ export default function Home() {
               </Card>
             </Link>
             {/* card2 */}
-            <Link to="/sunglasses">
+            <Link to="/products">
               <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
                 <CardMedia
                   component="img"
@@ -220,7 +226,7 @@ export default function Home() {
             </Link>
 
             {/* card3 */}
-            <Link to="/sunglasses">
+            <Link to="/products">
               <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
                 <CardMedia
                   component="img"
@@ -242,7 +248,7 @@ export default function Home() {
             </Link>
 
             {/* card4 */}
-            <Link to="/sunglasses">
+            <Link to="/products">
               <Card sx={{ maxWidth: 335, marginBottom: "20px " }}>
                 <CardMedia
                   component="img"
@@ -284,6 +290,7 @@ export default function Home() {
         >
           <Box>
             <img
+              data-aos="fade-up"
               className="bir"
               src="https://www.ray-ban.com/_repository/_resources/homepage/images/uploads/layout2018_Slot/D_HP2018_campaign_titanium_groupage.jpg"
               alt=""
@@ -294,7 +301,7 @@ export default function Home() {
             <Typography align="center" marginTop="7px" fontSize="2vh">
               Three icons, reborn in a new ultra-light form.
             </Typography>
-            <Link to="/sunglasses">
+            <Link to="/products">
               <center>
                 <Button
                   sx={{
@@ -324,7 +331,7 @@ export default function Home() {
             <Typography align="center" marginTop="7px" fontSize="2vh">
               Our big classic has gone metal. And it’s already a must-have.
             </Typography>
-            <Link to="/sunglasses">
+            <Link to="/products">
               <center>
                 <Button
                   sx={{

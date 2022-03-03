@@ -1,15 +1,13 @@
 .container {
-  background-image: url(../assets/images/photo1.jpg);
-  margin-top: 87px;
+  background: url(../assets/images/photo1.jpg);
 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 86vh;
-
-  /* background-attachment: fixed; */
 }
 
+/* background-attachment: fixed; */
 .text {
   display: flex;
   flex-direction: column;

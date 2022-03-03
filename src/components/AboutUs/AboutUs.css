@@ -1,0 +1,24 @@
+.prescription {
+  background-image: url(../assets/images/pres.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 86vh;
+  max-height: 100%;
+}
+
+.cript {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  height: 56vh;
+  margin-right: 50px;
+  color: white;
+}
+
+.type {
+  margin-bottom: 20px;
+  font-size: 38px;
+}
