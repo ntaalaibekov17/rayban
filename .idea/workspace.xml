@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b948fb3a-f8e2-437f-a4cf-98828a8c5c62" name="Default Changelist" comment="added crud">
-      <change afterPath="$PROJECT_DIR$/src/components/Payment/Payment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Payment/Payment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Product/ProductDetails.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CreditCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product/ProductCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/ProductCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product/ProductDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/ProductDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product/ProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product/ProductList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AdminPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EditProductPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditProductPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +64,7 @@
       <workItem from="1646252540006" duration="293000" />
       <workItem from="1646252847033" duration="12109000" />
       <workItem from="1646308253517" duration="11803000" />
-      <workItem from="1646324187559" duration="5003000" />
+      <workItem from="1646324187559" duration="5453000" />
     </task>
     <servers />
   </component>
