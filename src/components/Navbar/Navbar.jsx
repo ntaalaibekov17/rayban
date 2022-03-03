@@ -55,7 +55,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar id="navbar_color" position="fixed">
+    <AppBar id="navbar_color" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/">

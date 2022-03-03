@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AuthContextProvider from "./contexts/AuthContext";
 import ProductContextProvider from "./contexts/ProductContext";
 import MainRoutes from "./MainRoutes";
+import "../src/App.css";
 
 function App() {
 
