@@ -1,12 +1,10 @@
-<<<<<<< HEAD
+
 .container2 {
   background-image: url(../assets/images/photo1.jpg);
-  margin-top: 87px;
-=======
-.container {
-  background: url(../assets/images/photo1.jpg);
 
->>>>>>> d7b0edf3271b9dd2030e92fac384f8ba9bf7dbfe
+
+
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

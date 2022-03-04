@@ -123,7 +123,8 @@ const countries = [
   { code: "EH", label: "Western Sahara", phone: "212" },
   { code: "ER", label: "Eritrea", phone: "291" },
   { code: "ES", label: "Spain", phone: "34" },
-  { code: "ET", label: "Ethiopia", phone: "251" },
+  { code: "ET", label: "Ethiopia",
+    phone: "251" },
   { code: "FI", label: "Finland", phone: "358" },
   { code: "FJ", label: "Fiji", phone: "679" },
   {
@@ -250,7 +251,8 @@ const countries = [
     label: "Saint Martin (French part)",
     phone: "590",
   },
-  { code: "MG", label: "Madagascar", phone: "261" },
+  { code:
+        "MG", label: "Madagascar", phone: "261" },
   { code: "MH", label: "Marshall Islands", phone: "692" },
   {
     code: "MK",
@@ -439,91 +441,93 @@ const countries = [
 //
 const Contacts = () => {
   return (
-    <Grid
-      container
-      maxWidth="xl"
-      sx={{ display: "flex", justifyContent: "space-around" }}
-    >
-      <Grid marginTop="30px">
-        <Typography
-          variant="h4"
-          margin="35px"
-          display="flex"
-          justifyContent="center"
-          fontWeight="bold"
-        >
-          STORE LOCATOR
-        </Typography>
-        {/*  */}
-        <Autocomplete
-          id="country-select-demo"
-          sx={{ width: "35vw" }}
-          options={countries}
-          autoHighlight
-          getOptionLabel={(option) => option.label}
-          renderOption={(props, option) => (
-            <Box
-              component="li"
-              sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-              {...props}
-            >
-              <img
-                loading="lazy"
-                width="20"
-                src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-                srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+      <Grid
+          container
+          maxWidth="xl"
+          sx={{ display: "flex", justifyContent: "space-around" }}
+      >
+        <Grid marginTop="30px">
+          <Typography
+              variant="h4"
+              margin="35px"
+              display="flex"
+              justifyContent="center"
+              fontWeight="bold"
+          >
+            STORE LOCATOR
+          </Typography>
+          {/* */}
+          <Autocomplete
+              id="country-select-demo"
+              sx={{ width: "35vw" }}
+              options={countries}
+              autoHighlight
+              getOptionLabel={(option) => option.label}
+              renderOption={(props, option) => (
+                  <Box
+                      component="li"
+                      sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
+                      {...props}
+                  >
+                    <img
+                        loading="lazy"
+                        width="20"
+                        src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                        srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                        alt=""
+                    />
+                    {option.label} ({option.code}) +{option.phone}
+                  </Box>
+              )}
+              renderInput={(params) => (
+                  <TextField
+                      {...params}
+                      label="Choose a country"
+                      inputProps={{
+                        ...params.inputProps,
+                        autoComplete: "new-password", // disable autocomplete and autofill
+                      }}
+                  />
+              )}
+          />
+          <Box marginTop="40px">
+            <img
+                src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_raybanstores.4f93927c.svg"
                 alt=""
-              />
-              {option.label} ({option.code}) +{option.phone}
-            </Box>
-          )}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Choose a country"
-              inputProps={{
-                ...params.inputProps,
-                autoComplete: "new-password", // disable autocomplete and autofill
-              }}
             />
-          )}
-        />
-        <Box marginTop="40px">
-          <img
-            src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_raybanstores.4f93927c.svg"
-            alt=""
-          />
-          <Typography fontFamily="-moz-initial" marginBottom="15px">
-            RAY-BAN STORE
-          </Typography>
-          <img
-            src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_premium.244cb79f.svg"
-            alt=""
-          />
-          <Typography fontFamily="-moz-initial" marginBottom="15px">
-            CERTIFIED PREMIUM STORE
-          </Typography>
-          <img
-            src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_certified.bd1d46db.svg"
-            alt=""
-          />
-          <Typography fontFamily="-moz-initial" marginBottom="15px">
-            CERTIFIED STORE
-          </Typography>
-        </Box>
+            <Typography fontFamily="-moz-initial" marginBottom="15px">
+              RAY-BAN STORE
+            </Typography>
+            <img
+                src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_premium.244cb79f.svg"
+                alt=""
+            />
+            <Typography fontFamily="-moz-initial" marginBottom="15px">
+              CERTIFIED PREMIUM STORE
+            </Typography>
+            <img
+                src="https://www.ray-ban.com/_repository/_resources/storelocator/app/img/m_certified.bd1d46db.svg"
+                alt=""
+            />
+            <Typography fontFamily="-moz-initial" marginBottom="15px">
+              CERTIFIED STORE
+            </Typography>
+          </Box>
+        </Grid>
+        {/* КАРТА */}
+        <Grid marginTop="35px">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.1004570632135!2d74.60928181531457!3d42.87072377915591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7c8a870b60b%3A0xc49d7c76707fcd97!2z0KHQsNC70L7QvSDQntC_0YLQuNC60LAg0J7Rh9C60LDRgHXQug!5e0!3m2!1sru!2skg!4v1646248807620!5m2!1sru!2skg"
+              width="690"
+              height="550"
+              style={{
+                border: "0",
+                borderRadius: "10%", width: "45vw" }}
+              allowfullscreen=""
+              loading="lazy"
+          ></iframe>
+        </Grid>
       </Grid>
-      {/* КАРТА  */}
-      <Grid marginTop="35px">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.1004570632135!2d74.60928181531457!3d42.87072377915591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7c8a870b60b%3A0xc49d7c76707fcd97!2z0KHQsNC70L7QvSDQntC_0YLQuNC60LAg0J7Rh9C60LDRgHXQug!5e0!3m2!1sru!2skg!4v1646248807620!5m2!1sru!2skg"
-          width="690"
-          height="550"
-          style={{ border: "0", borderRadius: "10%", width: "45vw" }}
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </Grid>
-    </Grid>
   );
 };
 

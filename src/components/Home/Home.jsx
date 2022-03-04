@@ -18,11 +18,10 @@ import Marshal from "../assets/images/Marshal.png";
 import Round from "../assets/images/Round.png";
 import girl from "../assets/images/girl.jpg";
 import { Card, CardContent, CardMedia, Grid } from "@mui/material";
-<<<<<<< HEAD
-=======
-import Aos from "aos";
 
->>>>>>> d7b0edf3271b9dd2030e92fac384f8ba9bf7dbfe
+
+
+
 import { Link } from "react-router-dom";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -60,10 +59,6 @@ export default function Home() {
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
-
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
 
   return (
     <React.Fragment>
