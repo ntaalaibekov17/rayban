@@ -18,7 +18,9 @@ import Marshal from "../assets/images/Marshal.png";
 import Round from "../assets/images/Round.png";
 import girl from "../assets/images/girl.jpg";
 import { Card, CardContent, CardMedia, Grid } from "@mui/material";
-import Aos from "aos";
+
+
+
 
 import { Link } from "react-router-dom";
 
@@ -58,14 +60,10 @@ export default function Home() {
     setActiveStep(step);
   };
 
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container className="container" maxWidth="xl">
+      <Container className="container2" maxWidth="xl">
         <div className="text">
           <h1 className="h1">SUMMER, YOU'RE ON.</h1>
           <p className="p1">Put your Ray-Ban on and play </p>

@@ -11,6 +11,7 @@ import EditProductPage from "./pages/EditProductPage";
 import HomePage from "./pages/HomePage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
+import CreditCard from "./pages/CreditCard";
 
 const MainRoutes = () => {
   const { user } = useAuth();
@@ -51,6 +52,11 @@ const MainRoutes = () => {
       element: <Contacts />,
       id: 7,
     },
+    {
+      link: "/payment",
+      element: <CreditCard/>,
+      id:8
+    }
   ];
 
   const PRIVATE_ROUTES = [

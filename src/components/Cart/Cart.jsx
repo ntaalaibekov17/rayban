@@ -8,10 +8,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useProducts } from '../../contexts/ProductContext';
-import { Button } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import {Link} from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -82,7 +83,7 @@ export default function Cart() {
                                      <StyledTableCell align="right">Description</StyledTableCell>
                                     <StyledTableCell align="right">Price</StyledTableCell>
                                      <StyledTableCell align="right">Count</StyledTableCell>
-                                     <StyledTableCell align="right">Subprice</StyledTableCell>
+                                     <StyledTableCell align="right">Price</StyledTableCell>
                                      <StyledTableCell align="right">-</StyledTableCell>
                                  </TableRow>
                              </TableHead>
@@ -123,67 +124,11 @@ export default function Cart() {
                                  ))}
                              </TableBody>
                          </Table>
-
-                         <Button onClick={cartCleaner}>BUY NOW FOR {cart.totalPrice}$</Button>
+                        <Link to="/payment"><Button sx = {{backgroundColor:"black", marginLeft:"8px",color:"white"}}>Buy Now</Button> </Link>
+                         {/*<Button onClick={cartCleaner}>BUY NOW FOR {cart.totalPrice}$</Button>*/}
                      </TableContainer>
 
             </Container>
         </>
     )
 }
-
-//     <TableContainer component={Paper}>
-//         <Table sx={{ minWidth: 700 }} aria-label="customized table">
-//             <TableHead>
-//                 <TableRow>
-//                     <StyledTableCell>Picture</StyledTableCell>
-//                     <StyledTableCell align="right">Name</StyledTableCell>
-//                     <StyledTableCell align="right">Type</StyledTableCell>
-//                     <StyledTableCell align="right">Description</StyledTableCell>
-//                     <StyledTableCell align="right">Price</StyledTableCell>
-//                     <StyledTableCell align="right">Count</StyledTableCell>
-//                     <StyledTableCell align="right">Subprice</StyledTableCell>
-//                     <StyledTableCell align="right">-</StyledTableCell>
-//                 </TableRow>
-//             </TableHead>
-//             <TableBody>
-//                 {cart.products.map((row) => (
-//                     <StyledTableRow key={row.item.name}>
-//                         <StyledTableCell component="th" scope="row">
-//                             <img
-//                                 src={row.item.picture}
-//                                 alt=""
-//                                 style={{ width: '70px', height: '70px' }}
-//                             />
-//                         </StyledTableCell>
-//                         <StyledTableCell align="right">{row.item.name}</StyledTableCell>
-//                         <StyledTableCell align="right">{row.item.type}</StyledTableCell>
-//                         <StyledTableCell align="right">
-//                             {row.item.description}
-//                         </StyledTableCell>
-//                         <StyledTableCell align="right">{row.item.price}</StyledTableCell>
-//                         <StyledTableCell align="right">
-//                             <input
-//                                 type="number"
-//                                 min={1}
-//                                 max={1000}
-//                                 value={row.count}
-//                                 onChange={(e) =>
-//                                     handleCountChange(e.target.value, row.item.id)
-//                                 }
-//                             />
-//                         </StyledTableCell>{' '}
-//                         <StyledTableCell align="right">{row.subPrice}</StyledTableCell>
-//                         <StyledTableCell align="right">
-//                             <Button onClick={() => deleteCartProducts(row.item.id)}>
-//                                 Delete
-//                             </Button>
-//                         </StyledTableCell>
-//                     </StyledTableRow>
-//                 ))}
-//             </TableBody>
-//         </Table>
-//
-//         <Button onClick={cartCleaner}>BUY NOW FOR {cart.totalPrice}$</Button>
-//     </TableContainer>
-// );

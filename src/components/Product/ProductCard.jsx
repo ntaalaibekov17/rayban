@@ -57,7 +57,7 @@ export default function MediaCard({ item }) {
                 </IconButton>
             )}
 
-            <span onClick={() => navigate(`/products/${item.id}`)}>details</span>
+            <span onClick={() => navigate(`/products/${item.id}`)}>Details</span>
         </CardActions>
     </Card>
   );

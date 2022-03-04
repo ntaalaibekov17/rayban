@@ -1,6 +1,8 @@
-import React from "react";
-// import AddProduct from '../components/Product/AddProduc.jsx';
-import AddProduct from "../components/Product/AddProduct";
+
+import React from 'react';
+
+import AddProduct from '../components/Product/AddProduct';
+
 const AdminPage = () => {
   return (
     <div>
